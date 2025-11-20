@@ -10,7 +10,7 @@ COPY . .
 # Compila e gera o JAR (pula testes para acelerar)
 RUN mvn clean package -DskipTests
 
-# === STAGE 2: RUNTIME ==
+# === STAGE 2: RUNTIME ===
 # Nova etapa, usa apenas o Java Runtime (mais leve que Maven)
 FROM eclipse-temurin:21-jre
 

@@ -7,7 +7,7 @@ on:
   workflow_dispatch: 
 
 jobs:
-  #job 1 l
+  #job 1 
   test:
     runs-on: ubuntu-latest
     container:
@@ -18,7 +18,7 @@ jobs:
 
       - name: Executar testes no container
         run: mvn -B verify
-  #job 2 f
+  #job 2 
   build-and-deploy:
     needs: test
     runs-on: ubuntu-latest
@@ -37,7 +37,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/atvt2iec:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/atvt2iec:latest 
           
       - name: Deploy no Render
         run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
