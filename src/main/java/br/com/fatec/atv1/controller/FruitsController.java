@@ -23,7 +23,7 @@ public class FruitsController {
         3, Map.of("name", "Manga", "origin", "Índia", "season", "Verão", "calories", "60")
     ));
 
-    // GET ALL MOSTRAR
+    // GET ALL 
     @GetMapping
     public ResponseEntity<Map<Integer, Map<String, String>>> getFruits() {
         return ResponseEntity.ok(fruits);
